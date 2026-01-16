@@ -1,0 +1,225 @@
+<!doctype html>
+
+
+<html>
+  <head>
+    <meta charset = "utf-8">
+    <meta name="description" content="REGEDAT is a simple and intuitive website for quickly and efficiently calculating your course grades.">
+    <meta name="viewport" content="width=device-width">
+    <meta name="robots" content="index, follow">
+
+    <title> REGEDAT - Subjects </title>
+    
+    <!-- estimated domain name of the website
+    <link rel="canonical" href="https://rege.dat">
+    -->
+  </head>
+
+
+  <body>
+    <header>
+      <a href="index.html">
+        <!-- the current logo is for testing purposes -->
+        <img title="Main page of REGEDAT" alt="REGEDAT logo" src="https://raw.githubusercontent.com/wifitanmalo/veranera/refs/heads/main/logo.png">
+      </a>
+      <button id="user-menu-button" aria-haspopup="true" aria-expanded="false">
+        👤
+      </button>
+
+      <!-- user navigation menu -->
+      <nav id="user-menu" hidden>
+        <ul>
+          <li>
+              <a class="open-dialog">
+                Log in
+              </a>
+          </li>
+          <li hidden>
+              <a>
+                Log out
+              </a>
+          </li>
+          <li>
+            <a href="pages/settings.html">
+              Settings
+            </a>
+          </li>
+          <li>
+            <select id="theme-selector">
+              <option value="en"> Light </option>
+              <option value="es"> Dark </option>
+            </select>
+          </li>
+          <li>
+            <select id="lan-selector">
+              <option value="en"> English </option>
+              <option value="es"> Español </option>
+            </select>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <main>
+      <section id="subjects">
+        <header>
+          <h1> Subjects </h1>
+        </header>
+        <button type="button" class="open-dialog"> + </button>
+        <ul id="subjects-list">
+          <!-- subject example
+          <li class="subject-item">
+            <article class="subject">
+              <header>
+                <h3> 106012 - Física + Laboratorio </h3>
+              </header>
+              <a href="pages/grade.html">
+                <button type="button" class="grades-menu"> 📝 </button>
+              </a>
+              <button type="button" class="delete-subject"> x </button>
+              <footer>
+                <p><em> Total score: 3.0 </em></p>
+                <p><em> Total percentage: 100.0% </em></p>
+              </footer>
+            </article>
+          </li>
+          -->        
+        </ul>
+      </section>
+    </main>
+
+
+    <!-- error message when the current credits == max credits -->
+    <div class="form-errors" hidden>
+      <p> You have reached the maximum number of credits </p>
+    </div>
+
+
+    <!-- interactive dialog to create a subject -->
+    <dialog id="create-subject">
+      <form method="post" action="/">
+        <header>
+          <button type="button" class="close-dialog">
+            x
+          </button>
+          <h2> Create subject </h2>
+        </header>
+        <label>
+          ID
+          <input name="id" type="number" id="id-field" placeholder="106012" required>
+        </label>
+        <label>
+          Name
+          <input name="name" type="text" id="name-field" placeholder="Física + Laboratorio" required>
+        </label>
+        <label>
+          Credits
+          <input name="credits" type="number" id="credits-field" placeholder="4" required>
+        </label>
+        <button type="submit"> Create </button>
+      </form>
+      
+      <!-- error messages box of subject form -->
+      <div class="form-errors">
+        <p hidden> ID must be a positive number </p>
+        <p hidden> ID already exists </p>
+        <p hidden> Name can't be empty </p>
+        <p hidden> Credits must be a positive number </p>
+        <p hidden> The credits must not exceed the maximum allowed </p>
+      </div>
+    </dialog>
+
+
+    <!-- template with the subject structure -->
+    <template id="subject-tmpl">
+      <li class="subject-item">
+        <article class="subject">
+          <header>
+            <h3> 123456 - Subject name </h3>
+          </header>
+          <a href="pages/grade.html">
+            <button type="button" class="grades-menu"> 📝 </button>
+          </a>
+          <button type="button" class="delete-subject"> x </button>
+          <footer>
+            <p><em> Total score: 0.0 </em></p>
+            <p><em> Total percentage: 0.0% </em></p>
+          </footer>
+        </article>
+      </li>
+    </template>
+
+
+    <!-- interactive dialog to enter the user details -->
+    <dialog>
+      <form method="post" action="/">
+        <header>
+          <header>
+          <button
+            type="button" class="close-dialog">
+            x
+          </button>
+          <h2> Log in </h2>
+        </header>
+
+        <section>
+          <label>
+            Email
+            <input name="email" id="email-field" type="email" required>
+          </label>
+          <button type="button"> Next </button>
+        </section>
+        
+        <section hidden>
+          <label id="pass-field">
+            Password
+            <input name="password" type="password" required>
+          </label>
+          <button type="submit" class="open-dialog"> Enter </button>
+        </section>
+      </form>
+
+      <!-- error messages box of log in form -->
+      <div class="form-errors">
+        <p hidden> Email not found </p>
+        <p hidden> Invalid password </p>
+      </div>
+    </dialog>
+
+
+    <!-- dialog to enter the otp code -->
+    <dialog>
+      <form method="post" action="/">
+        <header>
+          <button type="button"> x </button>
+          <h2> OTP code </h2>
+        </header>
+        <label>
+          <input name="otp" type="number" id="otp-field" placeholder="123456" required>
+        </label>
+        <button type="submit"> Confirm </button>
+      </form>
+
+      <!-- error messages box of otp form -->
+      <div class="form-errors">
+        <p hidden> Invalid code </p>
+        <p hidden> Expired code </p>
+      </div>
+    </dialog>
+
+
+    <footer>
+      <p>
+        Made by
+        <a href="https://github.com/wifitanmalo" target="_blank" rel="noreferrer">
+          Nicolás
+        </a>
+        -
+        <a>
+          Contact
+        </a>
+      </p>
+    </footer>
+  </body>
+</html>
