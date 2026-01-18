@@ -1,0 +1,57 @@
+a {
+    color: #AAAAAA;
+    text-decoration: none;
+}
+
+
+html {
+    font-family: "Cascadia Code", monospace;
+    color: #AAAAAA;
+    background-color: #1F1F1F;
+    padding: 6% 6%
+}
+
+
+input {
+    width: 80%
+}
+
+
+select {
+    font-family: "Cascadia Code", monospace;
+    color: #AAAAAA;
+    background-color: #1F1F1F
+}
+
+
+dialog {
+    color: #AAAAAA;
+    background-color: #3D3D3D;
+}
+
+
+.form-errors {
+    color: #BD433C
+}
+
+
+#subjects-list {
+    background-color: #3D3D3D
+}
+
+
+.subject-item {
+    padding: 1% 0
+}
+
+
+.grades-menu
+{
+    background-color: #C5EF48
+}
+
+
+.delete-button {
+    color: #FFFFFF;
+    background-color: #B3352E
+}

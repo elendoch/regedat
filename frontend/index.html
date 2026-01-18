@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width">
     <meta name="robots" content="index, follow">
 
+    <link rel="stylesheet" href="css/styles.css">
+
     <title> REGEDAT - Subjects </title>
     
     <!-- estimated domain name of the website
@@ -22,7 +24,7 @@
         <!-- the current logo is for testing purposes -->
         <img title="Main page of REGEDAT" alt="REGEDAT logo" src="https://raw.githubusercontent.com/wifitanmalo/veranera/refs/heads/main/logo.png">
       </a>
-      <button id="user-menu-button" aria-haspopup="true" aria-expanded="false">
+      <button id="user-menu-button" title="User menu" aria-haspopup="true" aria-expanded="false">
         👤
       </button>
 
@@ -66,25 +68,24 @@
         <header>
           <h1> Subjects </h1>
         </header>
-        <button type="button" class="open-dialog"> + </button>
+        <button type="button" class="open-dialog" title="Create a subject"> + </button>
         <ul id="subjects-list">
-          <!-- subject example
+          <!-- subject example-->
           <li class="subject-item">
             <article class="subject">
               <header>
                 <h3> 106012 - Física + Laboratorio </h3>
               </header>
               <a href="pages/grade.html">
-                <button type="button" class="grades-menu"> 📝 </button>
+                <button type="button" class="grades-menu" title="Grades menu"> 📝 </button>
               </a>
-              <button type="button" class="delete-subject"> x </button>
+              <button type="button" class="delete-button" title="Delete subject" > x </button>
               <footer>
                 <p><em> Total score: 3.0 </em></p>
                 <p><em> Total percentage: 100.0% </em></p>
               </footer>
             </article>
           </li>
-          -->        
         </ul>
       </section>
     </main>
@@ -166,7 +167,7 @@
         <section>
           <label>
             Email
-            <input name="email" id="email-field" type="email" required>
+            <input name="email" id="email-field" type="email" placeholder="name@example.com" required>
           </label>
           <button type="button"> Next </button>
         </section>
@@ -212,8 +213,8 @@
     <footer>
       <p>
         Made by
-        <a href="https://github.com/wifitanmalo" target="_blank" rel="noreferrer">
-          Nicolás
+        <a href="https://github.com/elendoch" target="_blank" rel="noreferrer">
+          elendoch
         </a>
         -
         <a>

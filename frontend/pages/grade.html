@@ -7,6 +7,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="../css/styles.css">
   </head>
 
 
@@ -16,7 +18,7 @@
         <!-- the current logo is for testing purposes -->
         <img title="Main page of REGEDAT" alt="REGEDAT logo" src="https://raw.githubusercontent.com/wifitanmalo/veranera/refs/heads/main/logo.png">
       </a>
-      <button id="user-menu-button" aria-haspopup="true" aria-expanded="false">
+      <button id="user-menu-button" title="User menu" aria-haspopup="true" aria-expanded="false">
         👤
       </button>
 
@@ -59,10 +61,10 @@
       <header>
         <h2><em> Total score: 0.0 </em></h2>
       </header>
-      <button id="add-grade" class="open-dialog"> + </button>
-      <button id="get-total"> Total </button>
+      <button id="add-grade" title="Add a new grade" class="open-dialog"> + </button>
+      <button id="get-total" title="Get the total score"> Total </button>
       <a href="../index.html">
-        <button id="back" type="button"> Back </button>
+        <button type="button" title="Back to the subjects menu" class="back-button"> Back </button>
       </a>
 
       <section id="grades">
@@ -83,8 +85,8 @@
           </header>
             <input name="score" type="number" class="score-field" placeholder="score">
             <input name="percentage" type="number" class="percentage-field" placeholder="percentage">
-            <button type="button" class="open-dialog"> + </button>
-            <button type="button" class="delete-grade"> x </button>
+            <button type="button" title="Add a subgrade" class="open-dialog"> + </button>
+            <button type="button" title="Delete grade" class="delete-grade"> x </button>
             <ul class="subgrades-list"></ul>
         </article>
       </li>
@@ -96,8 +98,7 @@
       <form method="post" action="/">
         <header>
           <header>
-          <button
-            type="button" class="close-dialog">
+          <button type="button" class="close-dialog">
             x
           </button>
           <h2> Log in </h2>
@@ -153,7 +154,7 @@
       <p>
         Made by
         <a href="https://github.com/wifitanmalo" target="_blank" rel="noreferrer">
-          Nicolás
+          elendoch
         </a>
         -
         <a>
