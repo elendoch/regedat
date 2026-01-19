@@ -3,45 +3,112 @@ a {
     text-decoration: none;
 }
 
+button
+{
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 8px;
+    font-family: "Cascadia Code", monospace;
+}
+.confirm-button
+{
+    width: 80%;
+    height: 30px;
+    margin: 10px 0;
+    color: #323232;
+}
 
 html {
     font-family: "Cascadia Code", monospace;
     color: #AAAAAA;
     background-color: #1F1F1F;
-    padding: 6% 6%
+    padding: 2% 6%
 }
 
 
 input {
-    width: 80%
+    width: 80%;
+    height: 30px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 10px;
+    color: #FFFFFF;
+    background-color: #525252;
+    font-family: "Cascadia Code", monospace;
+}
+input::placeholder
+{
+    color: #AAAAAA;
 }
 
 
 select {
     font-family: "Cascadia Code", monospace;
     color: #AAAAAA;
-    background-color: #1F1F1F
+    background-color: #1F1F1F;
+    border: none;
+    font-size: 16px;
 }
 
 
 dialog {
+    width: 40%;
     color: #AAAAAA;
-    background-color: #3D3D3D;
+    background-color: #282828;
+    border: none;
+    border-radius: 20px;
+}
+.close-dialog
+{
+    color: #FFFFFF;
+    background-color: #282828;
 }
 
+
+ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 10% 10%;
+}
+
+
+.nav-menu
+{
+    width: 160px;
+    background-color: #1F1F1F;
+    border-radius: 20px;
+}
+
+.item-box
+{
+    width: 60%;
+    height: 200px;
+    background-color: #3D3D3D;
+    padding: 2% 2%;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
 
 .form-errors {
-    color: #BD433C
+    width: 60%;
+    padding: 1% 2%;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 1000;
+    color: #B3352E;
+    background-color: #FF746C;
+    border-radius: 20px;
 }
-
-
-#subjects-list {
-    background-color: #3D3D3D
-}
-
-
-.subject-item {
-    padding: 1% 0
+.dialog-errors
+{
+    width: 80%;
+    margin: auto;
 }
 
 

@@ -24,7 +24,7 @@
       </button>
 
       <!-- user navigation menu -->
-      <nav id="user-menu" hidden>
+      <nav id="user-menu" class="nav-menu" hidden>
         <ul>
           <li>
               <a class="open-dialog">
@@ -95,22 +95,22 @@
         <section>
           <label>
             Email
-            <input name="email" id="email-field" type="email" required>
+            <input name="email" id="email-field" type="email" placeholder="name@example.com" required>
           </label>
-          <button type="button"> Next </button>
+          <button type="button" class="confirm-button"> Next </button>
         </section>
         
         <section hidden>
           <label id="pass-field">
             Password
-            <input name="password" type="password" required>
+            <input name="password" type="password" placeholder="********" required>
           </label>
-          <button type="submit" class="open-dialog"> Enter </button>
+          <button type="submit" class="open-dialog confirm-button"> Enter </button>
         </section>
       </form>
 
       <!-- error messages box of log in form -->
-      <div class="form-errors">
+      <div class="form-errors dialog-errors" hidden>
         <p hidden> Email not found </p>
         <p hidden> Invalid password </p>
       </div>
@@ -127,12 +127,12 @@
         <label>
           <input name="otp" type="number" id="otp-field" placeholder="123456" required>
         </label>
-        <button type="submit"> Confirm </button>
+        <button type="submit" class="confirm-button"> Confirm </button>
       </form>
 
       <!-- error messages box of otp form -->
-      <div class="form-errors">
-        <p hidden> Invalid code </p>
+      <div class="form-errors dialog-errors">
+        <p > Invalid code </p>
         <p hidden> Expired code </p>
       </div>
     </dialog>
@@ -141,7 +141,7 @@
     <footer>
       <p>
         Made by
-        <a href="https://github.com/wifitanmalo" target="_blank" rel="noreferrer">
+        <a href="https://github.com/elendoch" target="_blank" rel="noreferrer">
           elendoch
         </a>
         -
